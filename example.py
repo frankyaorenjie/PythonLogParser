@@ -19,6 +19,8 @@ if __name__ == '__main__':
 	for line in bri.backread():
 		if lp.inPeriod(line):
 			lp.parseLine(line)
+			# test re is okay or not
+			lp.test(line)
 		else:
 			break
 	print lp.getResult()
