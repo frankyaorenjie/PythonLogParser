@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from backReader import BackwardsReaderIter
+from BackwardsReaderIter import BackwardsReaderIter
 from parselog import LogParser
 import time, re, sys
 
