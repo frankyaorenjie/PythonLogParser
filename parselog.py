@@ -11,7 +11,7 @@ class TimeParser(object):
 		self.__period = period
 
 	def __get(self, line):
-		t = re.search(self.__re_time, line).group(0)
+		t= re.search(self.__re_time, line).group(0)
 		return time.mktime(time.strptime(t, self.__str_time))
 
 	def inPeriod(self, line):
@@ -49,7 +49,7 @@ class LogParser(object):
 		for keyword in self.__keyword_result:
 			result = self.__keyword_result[keyword]['re_pattern'].search(line)
 			if result:
-				return "%s\nre: %s --> FOUND: %s" % (line, keyword, result.group(1))
+				print "%s\nre: '%s' --> FOUND: '%s'" % (line, keyword, result.group(1))
 
 	def inPeriod(self, line):
 		return (not self.__check_time or self.__TimeParser.inPeriod(line))
@@ -69,6 +69,6 @@ class LogParser(object):
 			name = self.__keyword_result[keyword]['name']
 			tmp_dict[name] = self.__keyword_result[keyword]['result']
 		return tmp_dict
-		
+
 	def getCount(self):
 		return self.__count
