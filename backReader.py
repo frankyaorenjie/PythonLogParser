@@ -45,10 +45,10 @@ class BackwardsReader:
             self.file.seek(-1, 2)
 
 # Example usage
-br = BackwardsReader(open('bar'))
-
-while 1:
-	line = br.readline()
-	if not line:
-		break
-	print repr(line)
+if __name__ == '__main__':
+	br = BackwardsReader(open('bar'))
+	while 1:
+		line = br.readline()
+		if not line:
+			break
+		print repr(line)
