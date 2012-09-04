@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-# -*-mode: python; coding: iso-8859-1 -*-
-#
-# Copyright (c) Peter Astrand <astrand@cendio.se>
 
 import os
 import string
@@ -44,11 +41,19 @@ class BackwardsReader:
             self.trailing_newline = 1
             self.file.seek(-1, 2)
 
+class BackwardsReaderIter(object):
+    def __init__(self, filename):
+        self.__br = BackwardsReader(open(filename))
+
+    def backread(self):
+        while 1:
+            line = self.__br.readline()
+            if not line:
+                break
+            yield line
+
 # Example usage
 if __name__ == '__main__':
-	br = BackwardsReader(open('bar'))
-	while 1:
-		line = br.readline()
-		if not line:
-			break
-		print repr(line)
+    bri = BackwardsReaderIter('example_access.log')  
+    for line in bri.backread():
+        print line.strip()
