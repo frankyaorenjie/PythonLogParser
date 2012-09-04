@@ -1,0 +1,2 @@
+127.0.0.1 - - [04/Sep/2012:23:59:10 +0800] "GET ADDR HTTP/1.0" 200 713 0 "http://www.example.com" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0)"
+127.0.0.1 - - [04/Sep/2012:23:59:10 +0800] "GET ADDR HTTP/1.0" 200 931 1000 "http://www.example.com" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0)"
