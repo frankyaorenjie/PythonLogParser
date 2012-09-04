@@ -6,7 +6,10 @@ This is a general method to parse log file. A workround to be 'general', easy-fo
 Whole 'project' (quote because it is really tiny) consists of two parts.
 
 1. parslog. It is core in this project.
-2. BackwardsReaderIter. It's another project on Github and it isn't included here. You can get this [here](https://github.com/baniuyao/BackwardsReaderIter). It makes you can read a file backwards line by line.
+2. BackwardsReaderIter. It's another project on Github and it isn't included here. You can get this [here](https://github.com/baniuyao/BackwardsReaderIter). It makes you can read a file backwards line by line. 
+
+*ATTENTION*:
+BackwardsReaderIter is also maintained by me and I chose to manage it on Github as well. For version control, *THIS IS NOT INCLUDED IN THIS PROJECT*.
 
 Piece of example:
 
